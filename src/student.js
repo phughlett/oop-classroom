@@ -11,14 +11,17 @@ class Student {
       this.skillLevel+=1;
       return this;
     }
-    doHomework(objParam){
-      console.log("dkdkdk ",objParam);
-      if(objParam.skillLevel<this.skillLevel && objParam.skillLevel>1){
-          this.assignments.push(objParam);
-          objParam.completed=true;
-      }else{
-          objParam.completed=false;
+    doHomework(...objParam){
+
+      if(!objParam.length){
+          console.log("dkdkdk ",objParam);
       }
+      // if(objParam.skillLevel<this.skillLevel && objParam.skillLevel>1){
+      //     this.assignments.push(objParam);
+      //     objParam.completed=true;
+      // }else{
+      //     objParam.completed=false;
+      // }
     }
   }
 
